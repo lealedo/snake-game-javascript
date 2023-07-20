@@ -1,4 +1,3 @@
-
 let snakeBody = [
   { x: 11, y: 11 },
   { x: 11, y: 10 },
