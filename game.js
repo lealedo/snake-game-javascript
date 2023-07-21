@@ -1,4 +1,5 @@
 const gameBoard = document.getElementById('game-board');
+const gameBody = document.getElementById('game-body');
 
 const GAME_SPEED = 5;
 const GRID_SIZE = 21;
