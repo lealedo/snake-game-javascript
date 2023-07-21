@@ -1,4 +1,4 @@
-food = { x: 6, y: 6 };
+let food = { x: 6, y: 6 };
 
 const updateFood = () => {
   if (onFood()) {
@@ -9,4 +9,4 @@ const updateFood = () => {
 
 const drawFood = () => {
   drawUtil(food, 'food');
-}
+};

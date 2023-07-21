@@ -11,8 +11,10 @@ const growSnake = () => {
 };
 
 const genFood = () => {
-  food = {
-    x: Math.floor(Math.random() * GRID_SIZE),
-    y: Math.floor(Math.random() * GRID_SIZE),
-  };
+  do {
+    food = {
+      x: Math.floor(Math.random() * GRID_SIZE + 1),
+      y: Math.floor(Math.random() * GRID_SIZE + 1),
+    };
+  } while (onFood());
 };
