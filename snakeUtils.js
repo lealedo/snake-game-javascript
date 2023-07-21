@@ -5,7 +5,7 @@ const checkBorder = () => {
 }
 
 const equalPos = (pos1, pos2) => {
-  return pos1.x === pos2.x && pos1.y === pos1.y;
+  return pos1.x === pos2.x && pos1.y === pos2.y;
 }
 
 const checkIntersect = () => {
@@ -16,5 +16,6 @@ const checkIntersect = () => {
 }
 
 const checkHead = () => {
+  console.log(checkBorder() || checkIntersect());
   return checkBorder() || checkIntersect();
 }

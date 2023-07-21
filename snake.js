@@ -2,6 +2,10 @@ let snakeBody = [
   { x: 11, y: 11 },
   { x: 11, y: 10 },
   { x: 11, y: 9 },
+  { x: 11, y: 8 },
+  { x: 11, y: 7 },
+  { x: 11, y: 6 },
+  { x: 11, y: 5 },
 ];
 
 const updateSnake = () => {

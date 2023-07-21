@@ -3,10 +3,12 @@ const gameBoard = document.getElementById('game-board');
 const GAME_SPEED = 5;
 
 let gameOver = false;
+let timer;
 
 const main = () => {
   update();
   draw();
+  isOver();
 };
 
 // update snake position and food positon
@@ -20,5 +22,10 @@ const draw = () => {
   drawSnake();
 };
 
+const isOver = () => {
+  if (gameOver) {
+    clearInterval(timer);
+  }
+}
 
-setInterval(main, 1000 / GAME_SPEED);
+timer = setInterval(main, 1000 / GAME_SPEED);
