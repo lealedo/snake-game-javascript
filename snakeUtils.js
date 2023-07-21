@@ -10,12 +10,13 @@ const equalPos = (pos1, pos2) => {
 
 const checkIntersect = () => {
   for (let i = 1; i < snakeBody.length; i++) {
-    return equalPos(snakeBody[0], snakeBody[i]);
+    if (equalPos(snakeBody[0], snakeBody[i])) {
+      return true;
+    }
   }
   return false;
 }
 
 const checkHead = () => {
-  console.log(checkBorder() || checkIntersect());
   return checkBorder() || checkIntersect();
 }
