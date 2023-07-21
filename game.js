@@ -8,7 +8,10 @@ let timer;
 const main = () => {
   update();
   draw();
-  isOver();
+
+  if (gameOver) {
+    isOver();
+  }
 };
 
 // update snake position and food positon
@@ -23,9 +26,8 @@ const draw = () => {
 };
 
 const isOver = () => {
-  if (gameOver) {
-    clearInterval(timer);
-  }
-}
+  clearInterval(timer);
+  alert(`Game Over!\nYour score is ${snakeBody.length}.`);
+};
 
 timer = setInterval(main, 1000 / GAME_SPEED);
