@@ -5,10 +5,10 @@ let snakeBody = [
 ];
 
 const updateSnake = () => {
-  direction = getDirection();
+  const direction = getDirection();
   snakeBody.pop();
 
-  newHead = { ...snakeBody[0] };
+  const newHead = { ...snakeBody[0] };
   newHead.x += direction.x;
   newHead.y += direction.y;
   snakeBody.unshift(newHead);
@@ -22,10 +22,6 @@ const updateSnake = () => {
 
 const drawSnake = () => {
   for (const i of snakeBody) {
-    const segmentElement = document.createElement('div');
-    segmentElement.style.gridColumnStart = i.y;
-    segmentElement.style.gridRowStart = i.x;
-    segmentElement.classList.add('snake');
-    gameBoard.appendChild(segmentElement);
+    drawUtil(i, 'snake');
   }
 };
