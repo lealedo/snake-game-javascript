@@ -12,6 +12,10 @@ const updateSnake = () => {
   newHead.x += direction.x;
   newHead.y += direction.y;
   snakeBody.unshift(newHead);
+
+  if (checkHead()) {
+    gameOver = true;
+  }
 };
 
 
@@ -24,4 +28,4 @@ const drawSnake = () => {
     segmentElement.classList.add('snake');
     gameBoard.appendChild(segmentElement);
   }
-}
+};

@@ -2,6 +2,8 @@ const gameBoard = document.getElementById('game-board');
 
 const GAME_SPEED = 5;
 
+let gameOver = false;
+
 const main = () => {
   update();
   draw();

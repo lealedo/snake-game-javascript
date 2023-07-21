@@ -10,7 +10,7 @@
 
   <title>Snake Game</title>
 
-  <!-- scripts -->
+  <!-- scripts. game.js need to get the game board element, thus should be loaded after the whole HTML page loaded. otherwise game.js will not be able to find the game-board. js and html are loaded at the same time by default -->
   <script src="game.js" defer></script>
   <script src="input.js"></script>
   <script src="snake.js"></script>
